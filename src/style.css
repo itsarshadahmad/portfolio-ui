@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #0a0a0a; /* Near-black for a premium feel */
+    color: #e2e8f0; /* Light gray (Tailwind slate-200) */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Hero content styling */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Custom gradient for accent text */
+.text-gradient {
+    background: linear-gradient(
+        90deg,
+        #fde047,
+        #facc15
+    ); /* Tailwind yellow-300 to yellow-500 */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Custom gradient for buttons */
+.btn-premium {
+    background-image: linear-gradient(
+        to right,
+        #facc15 0%,
+        #eab308 51%,
+        #facc15 100%
+    );
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.btn-premium:hover {
+    background-position: right center;
+}
+
+/* Custom scrollbar for a modern look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #111;
+}
+::-webkit-scrollbar-thumb {
+    background: #facc15; /* Accent color */
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #fde047;
+}
